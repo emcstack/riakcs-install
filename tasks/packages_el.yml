@@ -1,0 +1,12 @@
+---
+# Pre-Requesites for RiakCS install
+
+- name: Install repositories
+  script: script.rpm.sh
+  tags:
+  - packages
+
+- name: Install RiakCS - RiakS2
+  yum: name=riak-cs state=latest
+  tags:
+  - packages
