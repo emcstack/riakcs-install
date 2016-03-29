@@ -1,0 +1,8 @@
+---
+# tasks file for riakcs-install
+
+- name: Install packages
+  include: pre-requesites_el.yml
+  when: (ansible_os_family == "CentOS") or
+        (ansible_os_family == "RedHat")
+  become: yes
